@@ -17,6 +17,9 @@ namespace HighVoltz.AutoAngler
 		{
 			33820, // Weather-Beaten Fishing Hat
 			88710, // Nat's Hat
+			117405, // Nat's Drinking Hat
+			118380, // Hightfish Cap
+			118393, // Tentacled Hat
 		};
 
 		public static bool IsItemInBag(uint entry)
