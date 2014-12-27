@@ -19,6 +19,7 @@ namespace HighVoltz.AutoAngler
 
 		private static readonly Dictionary<uint, string> Lures = new Dictionary<uint, string>
 																{
+																	{118391, "Worm Supreme"},
 																	{68049, "Heat-Treated Spinning Lure"},
 																	{62673, "Feathered Lure"},
 																	{34861, "Sharpened Fish Hook"},
