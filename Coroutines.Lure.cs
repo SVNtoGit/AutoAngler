@@ -63,7 +63,7 @@ namespace HighVoltz.AutoAngler
 			// Fishing Hats
 			WoWItem head = StyxWoW.Me.Inventory.Equipped.Head;
 
-			if (head != null && Utility.FishingHatIds.Contains(head.Entry))
+            if (head != null && Utility.FishingHatIds.Any(hat => hat == head.Entry && hat != 118393)) // Checking for Draenor tentacle hat
 			{
 				AutoAnglerBot.Log("Appling Fishing Hat lure to fishing pole");
 				head.Use();

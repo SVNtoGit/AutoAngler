@@ -17,9 +17,7 @@ namespace HighVoltz.AutoAngler
 		{
 			33820, // Weather-Beaten Fishing Hat
 			88710, // Nat's Hat
-			117405, // Nat's Drinking Hat
-			118380, // Hightfish Cap
-			118393, // Tentacled Hat
+            118393 // Tentacled Hat
 		};
 
 		public static bool IsItemInBag(uint entry)
@@ -74,12 +72,12 @@ namespace HighVoltz.AutoAngler
 			return true;
 		}
 
-		internal static WoWItem GetFishingHat()
-		{
-			return StyxWoW.Me.BagItems.Where(i => FishingHatIds.Contains(i.Entry))
-				.OrderByDescending(i => i.ItemInfo.Level)
-				.FirstOrDefault();
-		}
+        internal static WoWItem GetFishingHat()
+        {
+            return StyxWoW.Me.BagItems.Where(i => FishingHatIds.Contains(i.Entry))
+                .OrderByDescending(i => i.ItemInfo.Level)
+                .FirstOrDefault();
+        }
 
 		public static bool EquipMainHat()
 		{

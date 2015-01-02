@@ -88,8 +88,11 @@ namespace HighVoltz.AutoAngler
 			if (await EquipHat())
 				return true;
 
-			if (await Applylure())
-				return true;
+            if (await Applylure())
+                return true;
+
+            if (await Applybait())
+                return true;
 
 			if (!AutoAnglerSettings.Instance.Poolfishing 
 				&& AutoAnglerBot.Instance.ShouldFaceWaterNow)

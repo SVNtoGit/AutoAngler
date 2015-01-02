@@ -26,20 +26,36 @@ namespace HighVoltz.AutoAngler
 				AutoAnglerBot.Log("Switched to my normal hat");
 		}
 
+	    static WoWItem SpecialPole()
+	    {
+	        return Me.BagItems.FirstOrDefault(i => i.Entry == 118381);
+	    }
+
+	    static bool canUpgrade(WoWItem mainHand)
+	    {
+	        return mainHand.Entry != 118381 && Me.BagItems.Any(i => i.Entry == 118381);
+	    }
 		public async static Task<bool> EquipPole()
 		{
 			var mainHand = StyxWoW.Me.Inventory.Equipped.MainHand;
 			// equip fishing pole if there's none equipped
-			if (mainHand != null && mainHand.ItemInfo.WeaponClass == WoWItemWeaponClass.FishingPole)
+			if (mainHand != null && mainHand.ItemInfo.WeaponClass == WoWItemWeaponClass.FishingPole && !canUpgrade(mainHand))
 				return false;
+		    WoWItem pole;
+            if (canUpgrade(mainHand))
+		    {
+		        pole = SpecialPole();
+		    }
+		    else
+		    {
 
-			WoWItem pole = Me.BagItems
-				.Where(i => i != null && i.IsValid 
-					&& i.ItemInfo.WeaponClass == WoWItemWeaponClass.FishingPole)
-				.OrderByDescending(i => i.ItemInfo.Level)
-				.FirstOrDefault();
-
-			if (pole == null)
+		        pole = Me.BagItems
+		            .Where(i => i != null && i.IsValid
+		                        && i.ItemInfo.WeaponClass == WoWItemWeaponClass.FishingPole)
+		            .OrderByDescending(i => i.ItemInfo.Level)
+		            .FirstOrDefault();
+		    }
+		    if (pole == null)
 				return false;
 
 			return await EquipItem(pole, WoWInventorySlot.MainHand);

@@ -347,12 +347,21 @@ namespace HighVoltz.AutoAngler
 			Debug("OffHand Id: {0}", AutoAnglerSettings.Instance.OffHand);
 
 			Debug("MaxFailedCasts: {0}", AutoAnglerSettings.Instance.MaxFailedCasts);
-			Debug("MaxTimeAtPool: {0}", AutoAnglerSettings.Instance.MaxTimeAtPool);
-			Debug("NinjaNodes: {0}", AutoAnglerSettings.Instance.NinjaNodes);
+            Debug("MaxTimeAtPool: {0}", AutoAnglerSettings.Instance.MaxTimeAtPool);
+            Debug("NinjaNodes: {0}", AutoAnglerSettings.Instance.NinjaNodes);
 			Debug("PathPrecision: {0}", AutoAnglerSettings.Instance.PathPrecision);
 			Debug("Poolfishing: {0}", AutoAnglerSettings.Instance.Poolfishing);
 			Debug("TraceStep: {0}", AutoAnglerSettings.Instance.TraceStep);
 			Debug("UseWaterWalking: {0}", AutoAnglerSettings.Instance.UseWaterWalking);
+
+            Debug("RandomGarrisonBaits: {0}", AutoAnglerSettings.Instance.RandomGarrisonBaits);
+            Debug("JawlessSkulkerBait: {0}", AutoAnglerSettings.Instance.JawlessSkulkerBait);
+            Debug("FatSleeperBait: {0}", AutoAnglerSettings.Instance.FatSleeperBait);
+            Debug("BlindLakeSturgeonBait: {0}", AutoAnglerSettings.Instance.BlindLakeSturgeonBait);
+            Debug("FireAmmoniteBait: {0}", AutoAnglerSettings.Instance.FireAmmoniteBait);
+            Debug("SeaScorpionBait: {0}", AutoAnglerSettings.Instance.SeaScorpionBait);
+            Debug("AbyssalGulperEelBaits: {0}", AutoAnglerSettings.Instance.AbyssalGulperEelBaits);
+            Debug("BlindLakeSturgeonBait: {0}", AutoAnglerSettings.Instance.BlindLakeSturgeonBait);
 	    }
     }
 }

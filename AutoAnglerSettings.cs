@@ -65,13 +65,65 @@ namespace HighVoltz.AutoAngler
 
 		[Setting, Styx.Helpers.DefaultValue(false), Description("If set to true bot will 'ninja' nodes from other players."),
 		Category("Fishing")]
-		public bool NinjaNodes { get; set; }
+        public bool NinjaNodes { get; set; }
 
-		#endregion
+        #endregion
 
-		#region Advanced
+        #region Garrison
 
-		[Setting, Styx.Helpers.DefaultValue(5),
+        [Setting, Styx.Helpers.DefaultValue(true),
+        Description(
+            "If set to false, bot will deactivate random baits in Garrison. The baits selected below will be the one used."
+            ), Category("Garrison")]
+        public bool RandomGarrisonBaits { get; set; }
+
+        [Setting, Styx.Helpers.DefaultValue(true),
+        Description(
+            "If set to false, bot will never use Jawless Skulker baits in Garrison."
+            ), Category("Garrison")]
+        public bool JawlessSkulkerBait { get; set; }
+
+        [Setting, Styx.Helpers.DefaultValue(true),
+        Description(
+            "If set to false, bot will never use Fat Sleeper Bait baits in Garrison."
+            ), Category("Garrison")]
+        public bool FatSleeperBait { get; set; }
+
+        [Setting, Styx.Helpers.DefaultValue(true),
+        Description(
+            "If set to false, bot will never use Blind Lake Sturgeon baits in Garrison."
+            ), Category("Garrison")]
+        public bool BlindLakeSturgeonBait { get; set; }
+
+        [Setting, Styx.Helpers.DefaultValue(true),
+        Description(
+            "If set to false, bot will never use Fire Ammonite Baits in Garrison."
+            ), Category("Garrison")]
+        public bool FireAmmoniteBait { get; set; }
+
+        [Setting, Styx.Helpers.DefaultValue(true),
+        Description(
+            "If set to false, bot will never use Sea Scorpion baits in Garrison."
+            ), Category("Garrison")]
+        public bool SeaScorpionBait { get; set; }
+
+        [Setting, Styx.Helpers.DefaultValue(true),
+        Description(
+            "If set to false, bot will never use Abyssal Gulper Eel Baits in Garrison."
+            ), Category("Garrison")]
+        public bool AbyssalGulperEelBaits { get; set; }
+
+        [Setting, Styx.Helpers.DefaultValue(true),
+        Description(
+            "If set to false, bot will never use Blackwater Whiptail baits in Garrison."
+            ), Category("Garrison")]
+        public bool BlackwaterWhiptailBait { get; set; }
+
+        #endregion
+
+        #region Advanced
+
+        [Setting, Styx.Helpers.DefaultValue(5),
 		Description("The maximum time in minutes to spend at a pool before it gets blacklisted"), Category("Advanced")]
 		public int MaxTimeAtPool { get; set; }
 
